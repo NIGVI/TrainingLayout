@@ -193,40 +193,68 @@ body._lock {
 	transform: translateY(-50%);
 	border: none;
 	cursor: pointer;
-	&::before, &::after {
-		content: '';
-		position: absolute;
-		right: 10px;
-		width: calc(100% - 20px);
-		height: 3px;
-		border-radius: 2px;
-		background-color: #b6bac7;
-		transition: width .3s, background-color .3s;
-	}
-	&::before {
-		top: 15px;
-	}
-	&::after {
-		bottom: 15px;
-		width: calc(100% - 30px);
-	}
 	&:hover {
-		&::before, .burger-line, &::after {
-			width: calc(100% - 20px);
+		.burger-line, .burger-line::after, .burger-line::before {
+			width: 50px;
 			background-color: #6188ff;
 		}
 	}
+	// &._active {
+	// 	&::before {
+	// 		transform: rotate(-45deg);
+	// 		top: 22px;
+	// 	}
+	// 	&::after {
+	// 		transform: rotate(45deg);
+	// 		bottom: 22px;
+	// 	}
+	// }
 }
 .burger-line {
 	position: absolute;
 	top: 50%;
 	right: 10px;
 	height: 3px;
-	width: calc(100% - 25px);
+	width: 45px;
 	border-radius: 2px;
-	background-color: #b6bac7;
+	background-color: rgba(182, 186, 199);
 	transform: translateY(-50%);
-	transition: width .3s, background-color .3s;
+	opacity: 1;
+	transition: width .3s, background-color .1s .1s, right .3s;
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		width: 50px;
+		height: 3px;
+		border-radius: 2px;
+		background-color: #b6bac7;
+		transition: width .2s, background-color .3s, top .3s .2s, bottom .3s .2s, transform .2s;
+	}
+	&::before {
+		top: 15px;
+		width: 40px;
+	}
+	&::after {
+		bottom: 15px;
+		width: 50px;
+	}
+	.burger._active & {
+		background-color: rgba(182, 186, 199, 0);
+		&::before, &::after {
+			transition: width .2s, background-color .3s, top .3s, bottom .3s, transform .3s .2s;
+		}
+		&::before {
+			top: 0;
+			width: 50px;
+			transform: rotate(45deg);
+		}
+		&::after {
+			bottom: 0;
+			width: 50px;
+			transform: rotate(-45deg);
+		}
+	}
 }
 
 @media (max-width: 830px) {
