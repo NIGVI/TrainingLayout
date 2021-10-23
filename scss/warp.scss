@@ -1,0 +1,57 @@
+
+
+// 1200 header
+// 960 blog
+// 890 logos, pam, quotes and newsletter
+// 740 faq and read app (intro, stats and get started)
+//--- WARP ---//
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+.win-header {
+	width: 1230px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.win-blog {
+	width: 990px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.win {
+	width: 920px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.win-small {
+	width: 770px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+
+
+
+//--- MEDIA ---//
+
+@media (max-width: 1300px) {
+	.win, .win-small, .win-blog, .win-header {
+		width: 800px
+	}
+}
+@media (max-width: 830px) {
+	.win, .win-small, .win-blog, .win-header {
+		width: 100%
+	}
+}

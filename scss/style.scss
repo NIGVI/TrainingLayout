@@ -1,0 +1,15 @@
+// @font-face {
+// 	font-family: 'Heebo';
+// 	src: url('fonts/Heebo-Regular.eot');
+// 	src: local('☺'), url('../fonts/Heebo-Regular.woff') format('woff'), url('../fonts/Heebo-Regular.ttf') format('truetype'), url('../fonts/Heebo-Regular.svg') format('svg');
+// 	font-weight: 400;
+// 	font-style: normal;
+// }
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600&display=swap');
+@import "null";
+@import "warp";
+@import "header";
+@import "footer";
+@import "content";
