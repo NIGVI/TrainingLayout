@@ -926,10 +926,96 @@ body._lock {
   }
 }
 .stats {
+  display: flex;
   border-top: 1px solid #d8e3fe;
   border-bottom: 1px solid #d8e3fe;
 }
 
+.stats-container {
+  width: 350px;
+  padding: 70px 0 60px;
+}
+
+.stats-left {
+  width: 50%;
+  color: #ffffff;
+  background: linear-gradient(229.32deg, #6888ff 12.77%, #5e80ff 73.11%);
+}
+.stats-left .stats-container {
+  padding-right: 90px;
+  margin-left: auto;
+}
+.stats-left .stats-container > * {
+  margin-left: auto;
+  text-align: right;
+}
+
+.stats-right {
+  width: 50%;
+  color: #5e80ff;
+  background: linear-gradient(101.48deg, #e9efff 41.56%, #e0e9ff 81.53%);
+}
+.stats-right .stats-container {
+  padding-left: 90px;
+  margin-right: auto;
+}
+
+.stats__icon {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 25px;
+}
+.stats__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.stats__data {
+  margin-bottom: 15px;
+  font-size: 48px;
+  letter-spacing: 0.03em;
+}
+
+.stats__text {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 830px) {
+  .stats-container {
+    width: 230px;
+    padding: 35px 0 30px;
+  }
+  .stats-left .stats-container {
+    padding-right: 30px;
+  }
+  .stats-right .stats-container {
+    padding-left: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .stats {
+    flex-direction: column;
+  }
+
+  .stats-left, .stats-right {
+    width: 100%;
+  }
+  .stats-left .stats-container > *, .stats-right .stats-container > * {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .stats-container {
+    max-width: 350px;
+    width: 100%;
+    padding: 35px 20px 30px !important;
+    margin: 0 auto;
+  }
+}
 .blog {
   border-top: 1px solid #d8e3fe;
   border-bottom: 1px solid #d8e3fe;
@@ -1006,6 +1092,8 @@ body._lock {
   position: absolute;
   left: 50%;
   top: 100%;
+  width: 62px;
+  height: 62px;
   transform: translate(-50%, -50%);
   box-shadow: 0px 5px 50px #f3f5fa;
 }
@@ -1339,6 +1427,10 @@ body._lock {
   }
 }
 @media (max-width: 830px) {
+  .newsletter {
+    padding: 60px 0;
+  }
+
   .newsletter-body {
     flex-direction: column;
     align-items: stretch;
@@ -1358,6 +1450,10 @@ body._lock {
   }
 }
 @media (max-width: 400px) {
+  .newsletter {
+    padding: 45px 0;
+  }
+
   .form form {
     display: block;
   }
