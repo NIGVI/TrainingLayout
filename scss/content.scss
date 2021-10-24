@@ -174,9 +174,65 @@
 // intro
 
 .intro {
+	overflow: hidden;
+	position: relative;
 	flex: 1 1 100%;
+	padding: 90px 0;
 	border-top: 1px solid #d8e3fe;
 	border-bottom: 1px solid #d8e3fe;
+	text-align: center;
+	background: linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+}
+.intro-bg-cloud {
+	pointer-events: none;
+	position: absolute;
+	left: -80px;
+	top: 0;
+	width: calc(100% + 160px);
+	height: 100%;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+.intro-header {
+	margin-bottom: 25px;
+}
+.intro__sub-title {
+	margin-bottom: 15px;
+	letter-spacing: 0.1em;
+}
+.intro__title {
+	color: #3d4f9f;
+	font-size: 48px;
+}
+.intro__text {
+	max-width: 500px;
+	margin: 0 auto 20px;
+}
+.intro__play-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 52px;
+	height: 52px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background-color: #ffffff;
+	box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
+	cursor: pointer;
+	&:hover img {
+		width: 17px;
+		height: 17px;
+	}
+	img {
+		width: 11px;
+		height: 11px;
+		object-fit: contain;
+		transition: width .2s, height .2s;
+	}
 }
 
 // logos
